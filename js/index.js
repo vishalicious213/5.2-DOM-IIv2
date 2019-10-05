@@ -36,9 +36,18 @@ boatImg.addEventListener("mouseout", (event) => {boatImg.style.transform = "rota
 // letsGoImg.addEventListener("dblclick", (event) => {letsGoImg.style.transform = "rotateX(0deg)"});
 
 let allText = document.querySelectorAll("p");
-console.log(allText);
+// console.log(allText);
 allText.forEach(word => {
     word.addEventListener("mouseover", (event) => {
         word.style.backgroundColor = "red"
+    })
+})
+
+let allHeaders = document.querySelectorAll("h2");
+// console.log(allHeaders);
+allHeaders.forEach(header => {
+    header.addEventListener("mouseover", (event) => {
+        header.style.backgroundImage = "linear-gradient(red, yellow, red, yellow)"
+        header.style.fontWeight = "bold";
     })
 })
