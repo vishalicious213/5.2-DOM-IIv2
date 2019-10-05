@@ -1,6 +1,6 @@
 // Your code goes here
 // 1. mouseenter, 2. mouseleave, 3. mouseover, 4. click, 5. dblclick,
-// 6. mouseout
+// 6. mouseout, 7. wheel
 
 
 // HEADER
@@ -39,7 +39,12 @@ let allText = document.querySelectorAll("p");
 // console.log(allText);
 allText.forEach(word => {
     word.addEventListener("mouseover", (event) => {
-        word.style.backgroundColor = "red"
+        word.style.backgroundColor = "red";
+        word.style.color = "black"
+    });
+    word.addEventListener("mouseout", (event) => {
+        word.style.backgroundColor = "black";
+        word.style.color = "yellow"
     })
 })
 
@@ -49,5 +54,12 @@ allHeaders.forEach(header => {
     header.addEventListener("mouseover", (event) => {
         header.style.backgroundImage = "linear-gradient(red, yellow, red, yellow)"
         header.style.fontWeight = "bold";
+    })
+})
+
+let allBodyText = document.querySelectorAll('h2,p,h4');
+allBodyText.forEach(item =>{
+    item.addEventListener('wheel', (event) => {
+        item.style.color = 'darkslategray';
     })
 })
